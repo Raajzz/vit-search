@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <unordered_map>
 
 // since we're just doing a demo project, we're using std namespace globally to increase some time, this will be re-written later
 using namespace std;
@@ -12,8 +13,8 @@ private:
   string course;
   string school;
   string specialization;
-public:
 
+public:
   Vitian(
     string name,
     string reg_no,
@@ -59,18 +60,69 @@ public:
   string get_course(){
     return this->course;
   }
+  
+  void put_course(string course){
+    this->course = course;
+  }
 
   string get_school(){
     return this->school;
+  }
+
+  void put_school(string school){
+    this->school = school;
   }
 
   string get_specialization(){
     return this->specialization;
   }
 
+  void put_specialization(string specialization){
+    this->specialization = specialization;
+  }
+
 };
+
+class VitianNode{
+private:
+public:
+  unordered_map<char, VitianNode*> children;
+  Vitian* contents;
+};
+
+class Trie{
+private:
+  VitianNode* node;
+public:
+  Trie(char letter){
+    node->children[letter] = nullptr;
+  }
+
+  void insertion(string reg_no){
+    // VitianNode* copy_node = node;
+    // for(int i=0; i<reg_no.length()-1; i++){
+    //   if(copy_node->children[reg_no[i]]){
+
+    //   } else {
+
+    //   }
+    // }
+    VitianNode* contents = nullptr;
+    // if(isEnd){
+    //   // inputs...
+    // } 
+    
+  }
+
+};  
 
 int main(){
   
   return 0;
 }
+
+/*
+
+There's gonna be n nodes, now each node will have a u_map within it that'll store the children
+
+*/
