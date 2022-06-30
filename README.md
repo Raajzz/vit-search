@@ -18,4 +18,4 @@ The main objective of the project is to insert the details of VITians and search
 - Rewriting the whole project without `using namespace std;` as it destroyes the purpose of namespace.
 - The data fields of `VitianNode` are public, which is not desirable in the long run, they should be made private with necessary getters and setters (or putters).
 - Using regular expression to verify whether the string entered by the client is correct (VIT uses a 9 Letter system, where the first two characters are the year of joining, next three is the course undertaken and last 4 is the number, for instance, Ex: 20BCE0138)
-- Ability to batch insert multiple students by reading from a file or from a data stream would be desirable too. Using a cloud platform to store all the VITians data in the form of blobs with indexed web-links is an approach I'm willing to look into.
+- Ability to batch insert multiple students by reading from a file or from a cloud storage would be desirable too. In addition to that using a cloud platform to store all the VITians data in the form of blobs with indexed web-links is an approach I'm willing to look into.
